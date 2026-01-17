@@ -1,33 +1,30 @@
 # 🎧 HUB Welcome Music (v1.0)
 
-[cite_start]Este plugin para **AMX Mod X** permite recibir a los jugadores con música personalizada y un menú de reglas obligatorio para limpiar la pantalla y continuar jugando.
+Este plugin para **AMX Mod X** está diseñado específicamente para servidores de **Half-Life**. Permite recibir a los científicos y guardias con música personalizada y un menú de reglas obligatorio que deben aceptar para limpiar su pantalla antes de la acción. 
 
 ## ✨ Características
-* **Menú de Bienvenida**: Presenta un menú centrado con reglas que el usuario debe aceptar presionando la tecla [1][cite: 2].
-* **Audio de Entrada**: Reproduce automáticamente el archivo `bienvenida.wav` al conectar.
-* **HUD Persistente**: Utiliza el canal fijo `4` para mostrar el mensaje de bienvenida de forma clara[cite: 2, 3].
-* **Limpieza Automática**: Al confirmar, el sonido se detiene y el mensaje HUD se borra instantáneamente mediante un método de borrado seguro[cite: 4, 5].
+* [cite_start]**Menú de Bienvenida**: Presenta un menú centrado con las reglas del servidor que el jugador debe aceptar presionando la tecla [1]. [cite: 2, 3]
+* [cite_start]**Audio de Entrada**: Al conectar, se ejecuta el comando de sonido para reproducir `bienvenida.wav`. 
+* [cite_start]**HUD de Alto Contraste**: Utiliza el canal fijo `4` para mostrar un mensaje en color cian (0, 255, 255) que no interfiere con los mensajes globales del juego. [cite: 2, 3]
+* [cite_start]**Borrado Seguro**: Al aceptar, el plugin detiene el audio y utiliza un método de sobreescritura para eliminar el mensaje HUD instantáneamente. [cite: 4, 5]
 
 ---
 
-## 🛠️ Guía de Instalación Paso a Paso
+## 🛠️ Guía de Instalación en Half-Life
 
-Sigue estos pasos para instalar el plugin correctamente en tu servidor:
+Sigue estos pasos para instalar el plugin en tu servidor HLDS:
 
-### 1. Subir los archivos de sonido
-* Ubica el archivo `bienvenida.wav`.
-* Súbelo a la carpeta de tu servidor en: `cstrike/sound/misc/`.
+### 1. Ubicar el Sonido
+* [cite_start]Coloca el archivo `bienvenida.wav` en: `valve/sound/misc/`. 
 
-### 2. Instalar el archivo compilado
-* Ubica el archivo `hub_welcome_music.amxx`[cite: 1].
-* Súbelo a la carpeta: `cstrike/addons/amxmodx/plugins/`.
+### 2. Instalar el Binario
+* [cite_start]Sube el archivo `hub_welcome_music.amxx` a: `valve/addons/amxmodx/plugins/`. 
 
-### 3. Agregar el Código Fuente (Opcional)
-* Si deseas realizar modificaciones, guarda el archivo `hub_welcome_music.sma` en: `cstrike/addons/amxmodx/scripting/`.
+### 3. Código Fuente (SMA)
+* [cite_start]Si deseas modificar las reglas o el canal del HUD, el archivo `hub_welcome_music.sma` va en: `valve/addons/amxmodx/scripting/`. 
 
-### 4. Activar el Plugin
-* Ve a la carpeta `cstrike/addons/amxmodx/configs/`.
-* Abre el archivo `plugins.ini` con un editor de texto.
-* Al final del archivo, agrega la siguiente línea:
+### 4. Activación
+* Abre el archivo `valve/addons/amxmodx/configs/plugins.ini`.
+* Añade esta línea al final del documento:
   ```text
   hub_welcome_music.amxx
