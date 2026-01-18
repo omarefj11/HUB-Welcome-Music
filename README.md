@@ -29,3 +29,5 @@ Sigue estos pasos para instalar el plugin en tu servidor HLDS:
   ```text
   hub_welcome_music.amxx
 ![Imagen Referencial](HUB%20Welcome%20Music.jpeg)
+
+> **Créditos:** Desarrollado por **omarefj11**.
